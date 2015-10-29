@@ -7,10 +7,9 @@ import java.util.ConcurrentModificationException;
 import javax.swing.*;
  
 /**
- * Conway's game of life is a cellular automaton devised by the
- * mathematician John Conway.
+ * game of life populations is a cellular automaton devised by the
  */
-public class ConwaysGameOfLife extends JFrame implements ActionListener {
+public class GameOfLifePopulations extends JFrame implements ActionListener {
     private static final Dimension DEFAULT_WINDOW_SIZE = new Dimension(800, 600);
     private static final Dimension MINIMUM_WINDOW_SIZE = new Dimension(400, 400);
     private static final int BLOCK_SIZE = 10;
@@ -26,10 +25,10 @@ public class ConwaysGameOfLife extends JFrame implements ActionListener {
  
     public static void main(String[] args) {
         // Setup the swing specifics
-        JFrame game = new ConwaysGameOfLife();
+        JFrame game = new GameOfLifePopulations();
         game.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        game.setTitle("Conway's Game of Life");
-        game.setIconImage(new ImageIcon(ConwaysGameOfLife.class.getResource("/images/logo.png")).getImage());
+        game.setTitle("Game of Life Populations");
+        game.setIconImage(new ImageIcon(GameOfLifePopulations.class.getResource("/images/logo.png")).getImage());
         game.setSize(DEFAULT_WINDOW_SIZE);
         game.setMinimumSize(MINIMUM_WINDOW_SIZE);
         game.setLocation((Toolkit.getDefaultToolkit().getScreenSize().width - game.getWidth())/2, 
@@ -37,7 +36,7 @@ public class ConwaysGameOfLife extends JFrame implements ActionListener {
         game.setVisible(true);
     }
  
-    public ConwaysGameOfLife() {
+    public GameOfLifePopulations() {
         // Setup menu
         mb_menu = new JMenuBar();
         setJMenuBar(mb_menu);
